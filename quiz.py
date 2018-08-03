@@ -16,8 +16,6 @@ medium_lives = 4
 
 hard_lives = 3
 
-#Functions:
-#   Classify quiz difficulty and subsequent lives.
 def easy_quiz():
     print ("\n Good luck! You have 5 attempts! \n")
     print quiz
@@ -33,12 +31,6 @@ def hard_quiz():
     print quiz
     return hard_lives
 
-#Fucntion:
-#   Input:
-#       User inputs desired difficulty.
-#   Output:
-#       The function returns a matching function.
-#       Appropriate quiz is printed and subsequent lives are established.
 def choose_difficulty():
     selection = raw_input("Please select difficulty: Easy, Medium, Hard ")
     if selection == "Easy":
@@ -52,21 +44,7 @@ def choose_difficulty():
             print ("\n Please choose an approved quiz! \n")
             return choose_difficulty()
 
-#Initializes the game:
-#   Input:
-#       User input is looped against the matching blank position and its answer.
-#   Output:
-#       User wil be prompted with a correct or incorrect message.
-#           A correct message will continue the loop.
-#           An incorrect message will prompt the user to input a different answer.
-#   Process:
-#       Repeats until user either runs out of lives or completes the quiz.
-#       If the user loses they will be prompted with a try again message.
-#           The quiz is reinitialized if desired.
-#           The quiz is quit if desired.
-#       If the user wins they will be prompted with a play again message.
-#           The quiz is reinitialized if desired.
-#           The quiz is quit if desired.
+
 def play():
     lives = choose_difficulty()
     answer_blank_index = 0
@@ -103,7 +81,3 @@ def play():
                     sys.exit()
 
 play()
-
-#Loop and import sys help provided by "Chapter 2: Flow Control" Automate The Boring Stuff With Python: Practical Programming For Total Beginners, by Al Sweigart, William Pollock, 2015. pp 31-77
-
-#List help provided by "Chapter 4: Lists" Automate The Boring Stuff With Python: Practical Programming For Total Beginners, by Al Sweigart, William Pollock, 2015. pp 79-103
